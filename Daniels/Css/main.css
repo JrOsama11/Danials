@@ -1,0 +1,557 @@
+
+body{
+    font-family: "Poppins", sans-serif;
+    color: #343434;
+    height: 4000px;
+    background-color: #fff;
+}
+span,p,.navbar-nav .nav-link.active,.navbar-nav .nav-link{
+    font-family: "Poppins", sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Montserrat", sans-serif;
+    color: #1C1C1C;
+}
+
+/* =============== */
+.navbar{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-link,.nav-link.active{
+    color: #fff;
+    position: relative;
+}
+.nav-link:focus, .nav-link:hover {
+    color: #fff;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.7s ease;
+}
+
+.nav-link.active::before {
+    color: #fff;
+    width: 80%;
+}
+
+.nav-link:focus,.nav-link:hover {
+    color: #fff;
+}
+/* =============== */
+
+#header{
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    height: 100vh;
+}
+#header .head-text h5{
+    font-size: 55px;
+    font-weight: 800;
+}
+#header .head-text span{
+    font-size: 60px;
+    font-weight: 200;
+}
+#header .head-icon i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.401);
+    border-radius: 50%;
+}
+
+#header .head-text span::after{
+    content: "";
+    animation-name:header-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes header-animation {
+    0% {content: "|";}
+    3% {content: " D|";}
+    5% {content: " De|";}
+    7% {content: " Dev|";}
+    10% {content: " Deve|";}
+    13% {content: " Devel|";}
+    15% {content: " Develo|";}
+    17% {content: " Develop|";}
+    20% {content: " Developm|";}
+    24% {content: " Developme|";}
+    25% {content: " Developmen|";}
+    27% {content: " Development|";}
+    30% {content: " Development|";}
+    32% {content: " Developmen|";}
+    35% {content: " Developme|";}
+    37% {content: " Develop|";}
+    40% {content: " Develo|";}
+    42% {content: " Devel|";}
+    45% {content: " Deve|";}
+    47% {content: " Dev|";}
+    50% {content: " De|";}
+    52% {content: " Des|";}
+    55% {content: " Desi|";}
+    57% {content: " Desig|";}
+    60% {content: " Design|";}
+    62% {content: " Designe|";}
+    65% {content: " Designer|";}
+    67% {content: " Designer|";}
+    70% {content: " Designe|";}
+    72% {content: " Design|";}
+    75% {content: " Desig|";}
+    77% {content: " Desi|";}
+    80% {content: " Des|";}
+    82% {content: " De|";}
+    85% {content: " Dev|";}
+    87% {content: " Deve|";}
+    90% {content: " Devel|";}
+    92% {content: " Develo|";}
+    95% {content: " Develop|";}
+    97% {content: " Develope|";}
+    100% {content: " Developer|";}
+}
+
+/* ======================= */
+
+.container{
+    width: 80% ; 
+}
+/* ======================= */
+
+
+#about .about-img::after{
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: -30px;
+    bottom: -30px;
+    background-image: url(../img/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+#about .about-right h3{
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 25px;
+}
+#about .about-text span{
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(153, 153, 153);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+#about .about-right p{
+    color: #748182;
+}
+
+/* =================== */
+
+#about .skill-box{
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    margin-top:30px;
+    height: 25px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+#about .title{
+    position: absolute;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    z-index: 5;
+}
+
+#about .skill-par{
+    height: 100%;
+    width: 95%;
+    border-radius: 6px;
+    background-color: #1C1C1C;
+    animation-name: progress;
+    animation-duration: 0.9s;
+}
+#about .skill-par.barnding{
+    height: 100%;
+    width: 80%;
+    border-radius: 6px;
+}
+#about .skill-par.development{
+    height: 100%;
+    width: 90%;
+    border-radius: 6px;
+}
+
+@keyframes progress {
+    0%{
+        width:25%;
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#about .about-btn button{
+    border: 1px solid #1C1C1C;
+    font-size: 13px;
+    width: 150px;
+    height: 45px;
+    transition: 0.5s;
+}
+#about .about-btn button:hover{
+    color: #fff;
+    background-color: #1C1C1C;
+}
+#about .about-btn .frist{
+    background-color: #1C1C1C;
+    color: #fff;
+    margin-right: 5px;
+    transition: color,background-color 0.5s;
+}
+#about .about-btn .frist:hover{
+    color: #1C1C1C;
+    background-color: #fff;
+}
+
+/* =================== */
+
+
+
+/* =================== */
+.main-title h3{
+    font-size: 40px;
+    font-weight: 900;
+    color: #1C1C1C;
+    z-index: 4;
+}
+.main-title h3::after{
+    text-align: center;
+    content: "";
+    position: absolute;
+    width: 15%;
+    height: 40%;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5%;
+    background-image: url(../img/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+/* ================== */
+
+
+
+/* ================== */
+
+#services{
+    background-color:#F7F7F7;
+}
+
+#services .serv-card{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#services .serv-card i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: #F4F4F4;
+    transition: all 0.5s;
+}
+#services .serv-card p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #748182;
+}
+
+#services .serv-card:hover i{
+    color: #f4f4f4ff;
+    background-color: #1C1C1C;
+}
+
+/* ======================= */
+.nav-tabs {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-tabs .nav-link{
+    color: #1C1C1C;
+    border: 0px;
+}
+
+.nav-tabs .nav-link:hover{
+    border-color: transparent;
+}
+.nav-tabs .nav-link.active {
+    border-bottom: 5px solid #1c1c1c
+}
+
+#work .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#work .item::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: top 0,9s;
+}
+#work .item:hover::after{
+    top: 0;
+}
+
+#work .item .layer-icon{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+    opacity: 0;
+    z-index: 5;
+}
+#work .item:hover .layer-icon{
+    top: 0;
+    opacity: 1;
+}
+
+#work .layer-icon i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    border: 1px solid #111;
+    border-radius: 50%;
+    background-color: #1C1C1C;
+    color: #fff;
+}
+#work .item .layer-text{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.6s ease-out;
+    opacity: 0;
+    z-index: 5;
+}
+#work .layer-text h6{
+    color: #1C1C1C;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 700;
+}
+#work .item:hover .layer-text{
+    opacity: 1;
+    top: 35%;
+}
+
+#work .layer-icon a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 5px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    transform: translateX(-50%);
+    border: 1px solid #111;
+    border-radius: 50%;
+    background-color: #1C1C1C;
+    color: #fff;
+    transition: all 0.3s ;
+    z-index: 10;
+}
+#work ul li a:hover {
+    color:#000;
+    background-color: #fff;
+}
+
+
+/* ===ماتنساش الايكون هوفر=== */
+
+
+
+/* ========================= */
+#clients{
+    background-color: #F7F7F7;
+}
+#clients .feed-back img{
+    width: 90px;
+    height: 90px;
+}
+#clients .feed-back p{
+    color: #748182;
+}
+#clients .carousel-indicators [data-bs-target]{
+    background-color: #869791;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+#clients .carousel-indicators{
+    bottom: -40px;
+}
+#clients .our-client{
+    background-color: #fff;
+}
+#clients .our-client h3{
+    font-size: 30px;
+    font-weight: 900;
+}
+
+/* ===================== */
+
+#team{
+    background-color: #F7F7F7;
+}
+
+#team .img-area{
+    overflow: hidden;
+}
+#team .team-card:hover .over-lay{
+    opacity: 1;
+    transform: rotateY(360deg) scale(0.95, 0.95);
+}
+#team .img-area:hover img{
+    transform: scale(1.2);
+}
+#team .img-area img{
+    transition: all 0.3s;
+}
+
+#team .over-lay{
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.7s;
+}
+#team .over-lay ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #111;
+    border-radius: 50%;
+    background-color: #1C1C1C;
+    color: #fff;
+    transition: all 0.3s ;
+
+}
+#team .over-lay ul li a:hover{
+    color: #000;
+    background-color: #fff;
+}
+
+
+#team .team-card .team-text{
+    background-color: #5B5B5B;
+    height: 100px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+
+/* ======================= */
+
+#contact{
+    background-color: #fff;
+}
+
+#contact .contact-item i{
+
+    background-color: #F4F4F4;
+    font-size: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+#contact .contact-item:hover i{
+    color:#fff ;
+    background-color: #000;
+}
+
+#contact .contact-item p{
+    font-size: 15px;
+}
+
+#contact .name-email input{
+    width: 48%;
+}
+
+#contact form input,#contact form textarea{
+    background-color: #F4F4F4;
+}
+#contact form textarea{
+    height: 180px;
+}
+#contact .form-control{
+    border: none;
+}
+#contact .form-control:focus{
+    box-shadow: none;
+
+}
+
+#contact .container button{
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #000;
+    transition: all 0.5s;
+}
+#contact .container button:hover{
+    color: #000;
+    background-color: #fff;
+}
+/* ======================= */
+footer p{
+    color: #738182;
+}
+
+
+/* ======================== */
+
+
+
+
+
